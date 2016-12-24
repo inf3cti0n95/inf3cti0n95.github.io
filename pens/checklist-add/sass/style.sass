@@ -1,0 +1,57 @@
+body
+	margin: 0
+	background: #1e77c5
+
+.container
+	height: 100%
+	width: 100%
+	position: absolute
+	display: flex
+	align-items: center
+	justify-content: center
+
+.svgcontainer
+	height: 500px
+	width: 500px
+	opacity: 1
+	#Layer_1
+		transition: all 0.5s linear
+		#newline2,#newline2-2
+			opacity: 0
+	#pencil-grp
+		transform: translateX(-45%) translateY(-10%)
+	&:hover
+		#Layer_1
+			animation: anime 1s
+			#newline-grp
+				#newline2
+					animation: anime 1s
+					animation-fill-mode: forwards
+				#newline2-2
+					animation: anime 1s
+					animation-delay: 1s
+					animation-fill-mode: forwards
+		#pencil-grp
+			animation: pencil 2s
+			animation-fill-mode: forwards
+		
+	
+	@keyframes anime
+		from
+			opacity: 0
+		to
+			opacity: 1
+	
+	@keyframes pencil
+		0%
+			transform: translateX(-45%) translateY(-10%)
+		50%
+			transform: translateX(45%) translateY(-10%)
+		65%
+			transform: translateX(-45%) translateY(0)
+		100%
+			transform: translate(0px)
+	
+	
+	
+	

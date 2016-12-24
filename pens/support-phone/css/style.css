@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  background: #1e77c5;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svgcontainer {
+  height: 500px;
+  width: 500px;
+  opacity: 1;
+}
+.svgcontainer:hover #phone, .svgcontainer:hover #gears {
+  animation: scaleUp 1s;
+  transform-origin: center center;
+}
+.svgcontainer:hover #gears #gear1, .svgcontainer:hover #gears #gear2, .svgcontainer:hover #gears #gear3 {
+  animation: rotation 2s infinite linear;
+  transform-origin: center center;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,40 @@
+body
+	margin: 0
+	background: #1e77c5
+
+.container
+	height: 100%
+	width: 100%
+	position: absolute
+	display: flex
+	align-items: center
+	justify-content: center
+
+.svgcontainer
+	height: 500px
+	width: 500px
+	opacity: 1
+	&:hover
+		#phone,#gears
+			animation: scaleUp 1s
+			transform-origin: center center
+		#gears
+			// animation-delay: 1s
+			// animation-fill-mode: forwards
+			#gear1,#gear2,#gear3
+				animation: rotation 2s infinite linear
+				transform-origin: center center
+				// animation-direction: alternate
+	
+@keyframes scaleUp
+	from
+		transform: scale(0)
+	to
+		transform: scale(1)
+	
+@keyframes rotation
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(180deg)
+	

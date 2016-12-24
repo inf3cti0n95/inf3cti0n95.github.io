@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  background: #1e77c5;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svgcontainer {
+  height: 500px;
+  width: 500px;
+  opacity: 1;
+}
+.svgcontainer:hover svg {
+  animation: opac 1s;
+}
+.svgcontainer:hover #dollar1, .svgcontainer:hover #dollar2, .svgcontainer:hover #dollar3 {
+  stroke-dasharray: 600px;
+  animation: slide 1s linear;
+}
+
+@keyframes slide {
+  0% {
+    stroke-dashoffset: 600px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes opac {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

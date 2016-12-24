@@ -1,0 +1,37 @@
+body
+	margin: 0
+	background: #1e77c5
+
+.container
+	height: 100%
+	width: 100%
+	position: absolute
+	display: flex
+	align-items: center
+	justify-content: center
+$dash: 600px
+.svgcontainer
+	height: 500px
+	width: 500px
+	opacity: 1
+	&:hover
+		svg
+			animation: opac 1s
+		#dollar1,#dollar2,#dollar3
+			// stroke-opacity: 0
+			stroke-dasharray: $dash
+			animation: slide 1s linear
+
+@keyframes slide
+	0%
+		stroke-dashoffset: $dash
+		
+	100%
+		stroke-dashoffset: 0px
+
+
+@keyframes opac
+	from
+		opacity: 0
+	to
+		opacity: 1
